@@ -23,8 +23,8 @@ A desktop application that captures and visualizes network connections and assoc
 ### 1. Clone or download the repository
 
 ```bash
-git clone https://github.com/yourusername/network-process-mapper.git
-cd network-process-mapper
+git clone https://github.com/ethanwaggoner/ProcessNetworkMapper.git
+cd ProcessNetworkMapper
 ```
 
 ### 2. Create a virtual environment (recommended)
