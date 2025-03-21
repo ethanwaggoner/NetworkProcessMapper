@@ -2,7 +2,8 @@
 
 A desktop application that captures and visualizes network connections and associates them with the corresponding processes on your system.
 
-![ff184b0293e9cf8d9fe0bca622ea4588](https://github.com/user-attachments/assets/e3698b07-fdc1-4e6f-8e37-4888c12b70a5)
+![e60e1c56997c0e3bab02ca1bb01a0ab1](https://github.com/user-attachments/assets/1aaef5ee-9a44-492e-a448-65716b0378af)
+
 
 
 ## Features
