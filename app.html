@@ -724,13 +724,7 @@ body {
                         seconds.toString().padStart(2, '0')
                     ].join(':');
                 },
-                getProcessClass(processName) {
-                    const process = this.knownProcesses[processName];
-                    return process ? process.color : 'process-default';
-                },
-                getProcessInitial(processName) {
-                    return processName.charAt(0).toUpperCase();
-                },
+
                 checkStatus() {
                     pywebview.api.get_status().then(status => {
                         const wasRunning = this.running;
