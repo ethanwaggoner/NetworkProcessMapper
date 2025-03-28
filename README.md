@@ -1,18 +1,9 @@
 # Network Process Mapper
 
-A desktop application that captures and visualizes network connections and associates them with the corresponding processes on your system.
+A command line application that captures network connections and associates them with the corresponding processes on your system.
 
-![e60e1c56997c0e3bab02ca1bb01a0ab1](https://github.com/user-attachments/assets/1aaef5ee-9a44-492e-a448-65716b0378af)
+![9a46b321ed7f2a279be0e80d31b0de9c](https://github.com/user-attachments/assets/1fa33a75-31f9-4bad-869f-a607dc21dfce)
 
-
-
-## Features
-
-- Real-time network traffic monitoring
-- Process-to-connection mapping
-- Filtering by process, IP address, or custom search
-- Sortable log entries
-- Clean, responsive UI
 
 ## Prerequisites
 
@@ -46,34 +37,38 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Usage
+## Running the Program
 
-### Running the application
+Run the tool using the command line. Below are some example usages:
 
-Run the application with administrator privileges (needed for packet capture):
-
-#### Windows
-
-Right-click on the command prompt or PowerShell and select "Run as administrator", then:
+Run indefinitely with table display:
 
 ```bash
-python app.py
+python network_process_mapper.py
 ```
 
-#### macOS/Linux
+Run for 30 seconds and display the table:
 
 ```bash
-sudo python3 app.py
+python network_process_mapper.py --time 30
 ```
 
-### Using the application
+Run indefinitely and output results to JSON on exit:
 
-1. Click "Start Capture" to begin capturing network traffic
-2. The application will display connections in the table below
-3. Use the search and filter options to find specific connections
-4. Click column headers to sort the data
-5. Click "Refresh Logs" to update the display with the latest data
-6. Click "Stop Capture" when finished
+```bash
+python network_process_mapper.py --json
+```
+
+Run for 30 seconds without real-time table output and save JSON:
+
+```bash
+python network_process_mapper.py --time 30 --json --no-table
+```
+
+Display help:
+```bash
+python network_process_mapper.py --help
+```
 
 ## Security Notes
 
@@ -81,4 +76,4 @@ This application:
 - Requires administrator/root privileges to function correctly
 - Only captures TCP traffic on your local system
 - Does not send any data over the network
-- Stores all captured data in memory only (data is lost when the application is closed)
+- Stores all captured data in memory only (data is lost when the application is closed) unless specified to output to JSON.
